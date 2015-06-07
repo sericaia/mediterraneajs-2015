@@ -1,0 +1,16 @@
+{
+  "name": "Server-configuration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^8.6.1",
+    "joi": "^6.4.3",
+    "lout": "^6.2.2"
+  }
+}
