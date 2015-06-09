@@ -23,12 +23,12 @@ server.register({
 
 
 server.start(function(){
-	console.log("Server started!");
+	console.info("Server started!");
 
-	console.log("ADDRESS:", server.info.address);
-	console.log("PROTOCOL:", server.info.protocol);
+	console.info("ADDRESS:", server.info.address);
+	console.info("PROTOCOL:", server.info.protocol);
 
-	console.log("PORT:", server.info.port);
-	console.log("HOST:", server.info.host);
-	console.log("URL:", server.info.uri);
+	console.info("PORT:", server.info.port);
+	console.info("HOST:", server.info.host);
+	console.info("URL:", server.info.uri);
 });
