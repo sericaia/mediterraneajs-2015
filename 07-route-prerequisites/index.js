@@ -18,7 +18,7 @@ server.register({register: require('lout')}, function (err) {
 });
 
 
-server.register({register: require('./server/authApi.js')}, {
+server.register({register: require('./server/mediterraneaApi.js')}, {
 }, function (err) {});
 
 server.register({

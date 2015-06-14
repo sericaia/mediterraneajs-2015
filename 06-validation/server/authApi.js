@@ -15,7 +15,7 @@ var register = function (plugin, options, next) {
         path:'/welcome/{name}',  // ex. http://localhost:8000/welcome/daniela?mood=happy
         handler: function (request, reply) {
 
-            var welcomeMsg = 'Welcome ' + request.params.name + "!\n";
+            var welcomeMsg = 'Welcome to MediterraneaJS, ' + request.params.name + "!\n";
             welcomeMsg += 'Are you ' + request.query.mood + "?";
 
             reply(welcomeMsg);
@@ -31,7 +31,7 @@ var register = function (plugin, options, next) {
             }
         }
     });
-   
+
     next();
 };
 
