@@ -16,13 +16,6 @@ var options = {
 server.register({register: require('./server/authApi.js')}, {
 }, function (err) {});
 
-server.register({register: require('./server/mediterraneaApi.js')}, {
-    routes: {
-        prefix: '/api'
-    }
-}, function (err) {
-});
-
 server.register({
     register: require('good'),
     options: options
@@ -37,18 +30,3 @@ server.register({
         });
     }
 });
-
-server.ext('onRequest', function (request, reply) {
-
-    console.log("onRequest", "event");
-    //perform route validations
-    routeValidation('dataToValidate', function(err, result){
-        return (err || !result) ? reply(err) : reply.continue();
-    });
-});
-
-var routeValidation = function(data, callback){
-    //perform some kind of validation
-    // ...
-    callback(null, 'dataToValidate');
-}

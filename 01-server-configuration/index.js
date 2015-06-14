@@ -2,8 +2,8 @@
 var Hapi = require('hapi');
 
 var config = {
-	environment: 'PRODUCTION',
 	dbConnection: 'mongodb://myvoodoapp',
+    drinks: ['capirinha', 'mojito', 'margarita']
 };
 
 var server = new Hapi.Server({

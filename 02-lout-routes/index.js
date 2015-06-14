@@ -2,17 +2,12 @@
 var Hapi = require('hapi');
 var server = new Hapi.Server();
 
-
 server.connection({
     host: 'localhost',
     port: 8000
 });
 
-server.register({register: require('./mediterraneaApi.js')}, {
-    routes: {
-        prefix: '/api'
-    }
-}, function (err) {
+server.register({register: require('./mediterraneaApi.js')}, function (err) {
 });
 
 server.register({
@@ -20,7 +15,6 @@ server.register({
 }, function (err) {
     /* error handing */
 });
-
 
 server.start(function(){
 	console.info("Server started!");

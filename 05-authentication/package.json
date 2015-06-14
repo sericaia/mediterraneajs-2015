@@ -1,5 +1,5 @@
 {
-  "name": "Understanding-lifecycle",
+  "name": "Authentication",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,9 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "good": "^6.1.4",
-    "good-console": "^5.0.2",
+    "bcrypt": "^0.8.3",
     "hapi": "^8.6.1",
-    "lout": "^6.2.2"
+    "hapi-auth-basic": "^2.0.0"
   }
 }

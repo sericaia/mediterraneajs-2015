@@ -2,7 +2,7 @@ var register = function (plugin, options, next) {
 
     plugin.route({
         method: 'GET',
-        path:'/mediterraneajs',
+        path:'/api/mediterraneajs',
         handler: function (request, reply) {
             reply('Mediterranea JS...the best route to meet Barcelona!');
         }
@@ -10,7 +10,7 @@ var register = function (plugin, options, next) {
 
     plugin.route({
         method: 'POST',
-        path:'/mediterraneajs',
+        path:'/api/mediterraneajs',
         handler: function (request, reply) {
             reply('Example POST route');
         }
@@ -18,7 +18,7 @@ var register = function (plugin, options, next) {
 
     plugin.route({
         method: 'PUT',
-        path:'/mediterraneajs/{id}',
+        path:'/api/mediterraneajs/{id}',
         handler: function (request, reply) {
             reply('Example PUT route with id=' + request.params.id);
         }
@@ -26,7 +26,7 @@ var register = function (plugin, options, next) {
 
     plugin.route({
         method: 'DELETE',
-        path:'/mediterraneajs/{id}',
+        path:'/api/mediterraneajs/{id}',
         handler: function (request, reply) {
             reply('Example DELETE route with id=' + request.params.id);
         }
