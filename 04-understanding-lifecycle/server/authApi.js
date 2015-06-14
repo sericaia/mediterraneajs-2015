@@ -8,7 +8,16 @@ var register = function (plugin, options, next) {
         handler: function (request, reply) {
             reply('super awesome index page!');
         }
-    });    
+    });
+
+
+    plugin.route({
+        method: 'GET',
+        path: '/vodoo',
+        handler: function (request, reply) {
+            return reply("making vodoo interceptor @MediterraneaJS");
+        }
+    });
 
     next();
 };

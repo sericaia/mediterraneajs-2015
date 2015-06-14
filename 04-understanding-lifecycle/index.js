@@ -40,15 +40,17 @@ server.register({
 
 server.ext('onRequest', function (request, reply) {
 
+    // route interceptor
+
     console.log("onRequest", "event");
-    //perform route validations
-    routeValidation('dataToValidate', function(err, result){
+
+    doSomething('sendSomeData', function(err, result){
         return (err || !result) ? reply(err) : reply.continue();
     });
 });
 
-var routeValidation = function(data, callback){
-    //perform some kind of validation
+var doSomething = function(data, callback){
+    //perform some kind of interception
     // ...
-    callback(null, 'dataToValidate');
+    callback(null, data);
 }

@@ -3,7 +3,7 @@ var Hapi = require('hapi');
 
 var config = {
 	dbConnection: 'mongodb://myvoodoapp',
-    drinks: ['capirinha', 'mojito', 'margarita']
+	drinks: ['capirinha', 'mojito', 'margarita']
 };
 
 var server = new Hapi.Server({
@@ -15,10 +15,12 @@ server.connection({
 	port: 8000
 });
 
-server.register({
-	register: require('./mediterraneaApi.js')
-}, function (err) {
-        //error handing
+server.route({
+	method: 'GET',
+	path:'/',
+	handler: function (request, reply) {
+		reply(server.settings.app);
+	}
 });
 
 server.start(function(){

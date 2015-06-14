@@ -35,6 +35,7 @@ var validate = function (username, password, callback) {
 
 server.register(HapiAuthBasic, function (err) {
     server.auth.strategy('simple', 'basic', { validateFunc: validate });
+
     server.route({
         method: 'GET',
         path: '/',
