@@ -27,7 +27,7 @@ var register = function (plugin, options, next) {
                 { method: partyDrinks, assign: 'drinks' },
             ],
             handler: function (request, reply) {
-                return reply("MediterraneaJS party requirements: \n" + request.pre.drinks);
+                return reply("MediterraneaJS party requirements: " + request.pre.drinks);
             }
         }
     });

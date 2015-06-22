@@ -40,17 +40,7 @@ server.register({
 
 server.ext('onRequest', function (request, reply) {
 
-    // route interceptor
-
-    console.log("onRequest", "event");
-
-    doSomething('sendSomeData', function(err, result){
-        return (err || !result) ? reply(err) : reply.continue();
-    });
+    request.setUrl('/vodoo');
+    reply.continue();
 });
 
-var doSomething = function(data, callback){
-    //perform some kind of interception
-    // ...
-    callback(null, data);
-}
